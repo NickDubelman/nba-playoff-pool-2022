@@ -1,1 +1,1 @@
-# NBA Playoff Scoring Pool, 2022
+# NBA Playoffs 2022 Scoring Pool

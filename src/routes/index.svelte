@@ -1,7 +1,49 @@
 <script>
 	export let stats
+
+	$: topScorers = stats
+		.sort((a, b) => {
+			if (a.pts !== b.pts) {
+				return a.pts > b.pts ? -1 : 1
+			}
+
+			const aName = `${a.player.first_name} ${a.player.last_name}`
+			const bName = `${b.player.first_name} ${b.player.last_name}`
+			return aName < bName ? -1 : 1
+		})
+		.slice(0, 10)
 </script>
 
-<pre>
-    {JSON.stringify(stats, null, 2)}
-</pre>
+<svelte:head>
+	<title>Scoring Pool</title>
+</svelte:head>
+
+<div class="content">
+	<h1>NBA Playoffs 2022 Scoring Pool</h1>
+
+	<h2>Leaderboard</h2>
+
+	<h2>Today's Top Performers</h2>
+	<table>
+		{#each topScorers as { player, pts }}
+			<tr>
+				<td>{player.first_name} {player.last_name}</td>
+				<td>{pts}</td>
+			</tr>
+		{/each}
+	</table>
+
+	<h2>Top Scorers Overall</h2>
+
+	<h2>Scoring Breakdown</h2>
+
+	<h2>Team Breakdown</h2>
+</div>
+
+<style>
+	.content {
+		font-family: 'Source Serif Pro';
+		width: 810px;
+		margin: auto;
+	}
+</style>

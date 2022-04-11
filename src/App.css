@@ -1,0 +1,34 @@
+@font-face {
+	font-family: 'Source Serif Pro';
+	src: local('Source Serif Pro'), url(./fonts/SourceSerifPro-Regular.ttf) format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Source Serif Pro';
+	src: local('Source Serif Pro'), url(./fonts/SourceSerifPro-Bold.ttf) format('truetype');
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Source Serif Pro';
+	src: local('Source Serif Pro'), url(./fonts/SourceSerifPro-Italic.ttf) format('truetype');
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Source Serif Pro';
+	src: local('Source Serif Pro'), url(./fonts/SourceSerifPro-BoldItalic.ttf) format('truetype');
+	font-style: italic;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Source Serif Pro';
+	src: local('Source Serif Pro'), url(./fonts/SourceSerifPro-SemiBold.ttf) format('truetype');
+	font-style: normal;
+	font-weight: 600;
+}
