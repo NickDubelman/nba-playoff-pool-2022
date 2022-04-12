@@ -4,47 +4,63 @@ const participants = {
 		'Donovan Mitchell',
 		'Bobby Portis',
 		'Cameron Payne',
-		'Victor Oladipo'
+		'Victor Oladipo',
+		'Duncan Robinson',
+		'Javale McGee'
 	],
 
 	Mikey: [
-        'Giannis Antetokounmpo',
-        'Cam Johnson',
-        'Kyle Lowry',
-        'Demar Derozan',
-        'Norman Powell',
-    ],
+		'Giannis Antetokounmpo',
+		'Cam Johnson',
+		'Kyle Lowry',
+		'Demar Derozan',
+		'Norman Powell',
+		'Marcus Morris',
+		'Nikola Vucevic'
+	],
 
 	Nick: [
-        'Kevin Durant',
-        'Kyrie Irving',
-        'Jordan Poole',
-        'Jae Crowder',
-        'Scottie Barnes',
-    ],
+		'Kevin Durant',
+		'Kyrie Irving',
+		'Jordan Poole',
+		'Jae Crowder',
+		'Scottie Barnes',
+		'Bruce Brown',
+		'Darius Garland',
+		'Nic Claxton'
+	],
 
 	'Bret + Mark': [
-        'Joel Embiid',
-        'James Harden',
-        'Dillon Brooks',
-        'Aaron Gordon',
-        'Zach Lavine',
-    ],
+		'Joel Embiid',
+		'James Harden',
+		'Dillon Brooks',
+		'Aaron Gordon',
+		'Zach Lavine',
+		'Reggie Jackson',
+		'Evan Mobley',
+		'Ivica Zubac'
+	],
 
 	Ethan: [
-        'Khris Middleton',
-        'Desmond Bane',
-        'Tobias Harris',
-        'Gary Trent',
-        'Will Barton',
-    ],
+		'Khris Middleton',
+		'Desmond Bane',
+		'Tobias Harris',
+		'Gary Trent',
+		'Will Barton',
+		'Pat Connaughton',
+		'Dorian Finney-Smith',
+		'Chris Boucher'
+	],
 
 	'Jordan + Boozy': [
 		'Jayson Tatum',
 		'Mikal Bridges',
 		'Marcus Smart',
 		'Fred VanVleet',
-		'Al Horford'
+		'Al Horford',
+		'Brandon Clarke',
+		'Draymond Green',
+		'Grant Williams'
 	],
 
 	'Adam + Kevin': [
@@ -52,24 +68,33 @@ const participants = {
 		'Klay Thompson',
 		'Andrew Wiggins',
 		'Seth Curry',
-		'Jordan Clarkson'
+		'Jordan Clarkson',
+		'Mike Conley',
+		'Jonathan Kuminga',
+		'Otto Porter Jr.'
 	],
 
 	'Robbie E': [
-        'Ja Morant',
-        'Tyler Herro',
-        'Jaren Jackson Jr.',
-        'Brook Lopez',
-        'Rudy Gobert',
-    ],
+		'Ja Morant',
+		'Tyler Herro',
+		'Jaren Jackson Jr.',
+		'Brook Lopez',
+		'Rudy Gobert',
+		'OG Anunoby',
+		'Andre Drummond',
+		'Ziaire Williams'
+	],
 
 	Daniel: [
-        'Jaylen Brown',
-        'Deandre Ayton',
-        'Derrick White',
-        'Bojan Bogdanovic',
-        'Trae Young',
-    ],
+		'Jaylen Brown',
+		'Deandre Ayton',
+		'Derrick White',
+		'Bojan Bogdanovic',
+		'Trae Young',
+		'Landry Shamet',
+		'Payton Pritchard',
+		"De'Andre Hunter"
+	],
 
 	Winston: [
 		'Jrue Holiday',
@@ -77,7 +102,9 @@ const participants = {
 		'Paul George',
 		'Pascal Siakam',
 		'Grayson Allen',
-		"De'Anthony Melton"
+		"De'Anthony Melton",
+		'Monte Morris',
+		'Lauri Markannen'
 	],
 
 	David: [
@@ -86,7 +113,9 @@ const participants = {
 		'Tyrese Maxey',
 		'Jalen Brunson',
 		'Spencer Dinwiddie',
-		'Bones Hyland'
+		'Bones Hyland',
+		'Bogdan Bogdanovic',
+		'Clint Capela'
 	],
 
 	'Robby T': [
@@ -95,7 +124,9 @@ const participants = {
 		'Karl Anthony Towns',
 		'Anthony Edwards',
 		"D'Angelo Russell",
-		'Max Strus'
+		'Max Strus',
+		'Caleb Martin',
+		'Gabe Vincent'
 	]
 }
 
