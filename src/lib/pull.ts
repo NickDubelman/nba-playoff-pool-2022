@@ -34,7 +34,7 @@ async function getGames() {
 	return allData
 }
 
-export default async function getStats() {
+export async function getStats() {
 	const games = await getGames()
 
 	let allData = []
@@ -97,7 +97,13 @@ export const getParticipantScores = gameStats =>
 				return remainingTeams.includes(teamAlias)
 			}).length
 		}))
-		.sort((a, b) => (a.points > b.points ? -1 : 1))
+		.sort((a, b) => {
+			if (a.points !== b.points) {
+				return a.points > b.points ? -1 : 1
+			}
+
+			return a.name < b.name ? -1 : 1
+		})
 
 const getGamesPlayed = (playerName, gameStats) =>
 	gameStats

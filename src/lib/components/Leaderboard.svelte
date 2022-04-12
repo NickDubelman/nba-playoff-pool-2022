@@ -43,16 +43,19 @@
 				if (a.points !== b.points) {
 					return a.points > b.points ? -1 : 1
 				}
+				break
 
 			case 'players remaining':
 				if (a.remainingPlayers !== b.remainingPlayers) {
 					return a.remainingPlayers > b.remainingPlayers ? -1 : 1
 				}
+				break
 
 			case 'games played':
 				if (a.gamesPlayed !== b.gamesPlayed) {
 					return a.gamesPlayed > b.gamesPlayed ? -1 : 1
 				}
+				break
 
 			case 'ppg': {
 				const aPPG = a.points / a.gamesPlayed
@@ -61,6 +64,7 @@
 				if (aPPG !== bPPG) {
 					return aPPG > bPPG ? -1 : 1
 				}
+				break
 			}
 		}
 
