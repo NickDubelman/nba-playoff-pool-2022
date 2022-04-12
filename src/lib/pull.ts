@@ -9,7 +9,7 @@ import {
 	teamNameDifferences
 } from './utils'
 
-const startDate = new Date(2022, 3, 10) // first day of play-in tournament
+const startDate = new Date(2022, 3, 12) // first day of play-in tournament
 
 async function getGames() {
 	let allData = []
