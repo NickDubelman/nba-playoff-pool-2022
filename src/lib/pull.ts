@@ -1,3 +1,14 @@
+import * as d3 from 'd3'
+
+import participants from './participants'
+import {
+	formatDate,
+	haventPlayedYet,
+	nameDifferences,
+	remainingTeams,
+	teamNameDifferences
+} from './utils'
+
 const startDate = new Date(2022, 3, 10) // first day of play-in tournament
 
 async function getGames() {
@@ -49,4 +60,51 @@ export default async function getStats() {
 	return allData
 }
 
-const formatDate = (date: Date) => date.toISOString().split('T')[0]
+export const getParticipantScores = gameStats =>
+	Object.entries(participants)
+		.map(([name, players]) => ({
+			name,
+			points: d3.sum(
+				players.map(playerName => {
+					const statsForPlayer = gameStats.filter(({ player }) => {
+						const fullName = `${player.first_name} ${player.last_name}`
+						return fullName === (nameDifferences[playerName] || playerName)
+					})
+
+					// if (
+					// 	statsForPlayer.length === 0 &&
+					// 	!haventPlayedYet.find(p => p.name === playerName)
+					// ) {
+					// 	throw new Error('Could not find stats for ' + playerName)
+					// }
+
+					return d3.sum(statsForPlayer.map(p => p.pts))
+				})
+			),
+			gamesPlayed: d3.sum(
+				players.map(playerName => getGamesPlayed(playerName, gameStats))
+			),
+			remainingPlayers: players.filter(playerName => {
+				const player = gameStats.find(({ player }) => {
+					const fullName = `${player.first_name} ${player.last_name}`
+					return fullName === (nameDifferences[playerName] || playerName)
+				})
+
+				if (!player) return true
+				const { abbreviation } = player.team
+				const teamAlias = teamNameDifferences[abbreviation] || abbreviation
+
+				return remainingTeams.includes(teamAlias)
+			}).length
+		}))
+		.sort((a, b) => (a.points > b.points ? -1 : 1))
+
+const getGamesPlayed = (playerName, gameStats) =>
+	gameStats
+		.filter(({ player }) => {
+			const fullName = `${player.first_name} ${player.last_name}`
+			playerName = nameDifferences[playerName] || playerName
+
+			return fullName === playerName
+		})
+		.filter(({ min }) => min && min !== '0:00').length

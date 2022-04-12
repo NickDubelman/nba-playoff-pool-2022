@@ -1,7 +1,9 @@
 <script>
-	export let stats
+	import Leaderboard from '$lib/components/Leaderboard.svelte'
 
-	$: topScorers = stats
+	export let gameStats, participantScores
+
+	$: topScorers = gameStats
 		.sort((a, b) => {
 			if (a.pts !== b.pts) {
 				return a.pts > b.pts ? -1 : 1
@@ -22,6 +24,7 @@
 	<h1>NBA Playoffs 2022 Scoring Pool</h1>
 
 	<h2>Leaderboard</h2>
+	<Leaderboard {participantScores} />
 
 	<h2>Today's Top Performers</h2>
 	<table>
@@ -33,11 +36,11 @@
 		{/each}
 	</table>
 
-	<h2>Top Scorers Overall</h2>
+	<!-- <h2>Top Scorers Overall</h2>
 
 	<h2>Scoring Breakdown</h2>
 
-	<h2>Team Breakdown</h2>
+	<h2>Team Breakdown</h2> -->
 </div>
 
 <style>
