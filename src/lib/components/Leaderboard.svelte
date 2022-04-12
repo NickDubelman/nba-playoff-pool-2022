@@ -56,10 +56,10 @@
 
 <table>
 	<tr>
-		<th>Participant</th>
-		<th>Points</th>
-		<th>Players Remaining</th>
-		<th>Games Played</th>
+		<th style="width: 132px">Participant</th>
+		<th style="width: 64px">Points</th>
+		<th style="width: 100px">Players Remaining</th>
+		<th style="width: 70px">Games Played</th>
 		<th>PPG</th>
 	</tr>
 
@@ -83,7 +83,7 @@
 <style>
 	table {
 		border-collapse: collapse;
-		width: 100%;
+		min-width: 432px;
 	}
 
 	tr:not(:last-child) {
