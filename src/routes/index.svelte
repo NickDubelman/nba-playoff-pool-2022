@@ -51,7 +51,7 @@
 <style>
 	.content {
 		font-family: 'Source Serif Pro';
-		width: 600px;
+		width: 464px;
 		margin: auto;
 	}
 </style>
