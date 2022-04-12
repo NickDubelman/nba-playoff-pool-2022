@@ -6,7 +6,8 @@ const participants = {
 		'Cameron Payne',
 		'Victor Oladipo',
 		'Duncan Robinson',
-		'Javale McGee'
+		'Javale McGee',
+		'Tyus Jones'
 	],
 
 	Mikey: [
@@ -16,7 +17,8 @@ const participants = {
 		'Demar Derozan',
 		'Norman Powell',
 		'Marcus Morris',
-		'Nikola Vucevic'
+		'Nikola Vucevic',
+		"Royce O'Neal"
 	],
 
 	Nick: [
