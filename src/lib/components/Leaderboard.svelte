@@ -40,17 +40,31 @@
 	const sortedScores = participantScores.sort((a, b) => {
 		switch (sortBy) {
 			case 'points':
-				return a.points > b.points ? -1 : 1
+				if (a.points !== b.points) {
+					return a.points > b.points ? -1 : 1
+				}
+
 			case 'players remaining':
-				return a.remainingPlayers > b.remainingPlayers ? -1 : 1
+				if (a.remainingPlayers !== b.remainingPlayers) {
+					return a.remainingPlayers > b.remainingPlayers ? -1 : 1
+				}
+
 			case 'games played':
-				return a.gamesPlayed > b.gamesPlayed ? -1 : 1
+				if (a.gamesPlayed !== b.gamesPlayed) {
+					return a.gamesPlayed > b.gamesPlayed ? -1 : 1
+				}
+
 			case 'ppg': {
 				const aPPG = a.points / a.gamesPlayed
 				const bPPG = b.points / b.gamesPlayed
-				return aPPG > bPPG ? -1 : 1
+
+				if (aPPG !== bPPG) {
+					return aPPG > bPPG ? -1 : 1
+				}
 			}
 		}
+
+		return a.name < b.name ? -1 : 1
 	})
 </script>
 
