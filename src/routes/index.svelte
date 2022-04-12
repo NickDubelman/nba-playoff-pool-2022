@@ -23,6 +23,11 @@
 <div class="content">
 	<h1>NBA Playoffs 2022 Scoring Pool</h1>
 
+	<p>
+		These stats should update every 10 minutes or so. You need to refresh your page
+		for the stats to update.
+	</p>
+
 	<h2>Leaderboard</h2>
 	<Leaderboard {participantScores} />
 
