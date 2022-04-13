@@ -29,7 +29,7 @@ const participants = {
 		'Scottie Barnes',
 		'Bruce Brown',
 		'Darius Garland',
-		'Nic Claxton'
+		'Nicolas Claxton'
 	],
 
 	'Bret + Mark': [
@@ -106,7 +106,7 @@ const participants = {
 		'Grayson Allen',
 		"De'Anthony Melton",
 		'Monte Morris',
-		'Lauri Markannen'
+		'Lauri Markkanen'
 	],
 
 	David: [

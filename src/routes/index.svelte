@@ -13,7 +13,8 @@
 			const bName = `${b.player.first_name} ${b.player.last_name}`
 			return aName < bName ? -1 : 1
 		})
-		.slice(0, 10)
+		.filter(player => player.pts)
+		.slice(0, 24)
 </script>
 
 <svelte:head>
@@ -53,5 +54,9 @@
 		font-family: 'Source Serif Pro';
 		width: 464px;
 		margin: auto;
+	}
+
+	table {
+		margin-bottom: 16px;
 	}
 </style>
