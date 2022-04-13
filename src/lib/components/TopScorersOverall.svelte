@@ -52,7 +52,7 @@
 	<tr>
 		<th>Player</th>
 		<th style="width: 42px">Team</th>
-		<th>Picked By</th>
+		<th>Picked by</th>
 		<th style="width: 56px">Points</th>
 		<th style="width: 56px">Games Played</th>
 		<th>PPG</th>

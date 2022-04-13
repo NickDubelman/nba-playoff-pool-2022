@@ -65,6 +65,32 @@ export const teamColors = {
 	PHO: '#e25301'
 }
 
+export const allTeams = [
+	// West
+	'PHO',
+	'MEM',
+	'GSW',
+	'DAL',
+	'UTA',
+	'DEN',
+	'MIN',
+	'LAC',
+	'NOP',
+	'SAS',
+
+	// East
+	'MIA',
+	'BOS',
+	'MIL',
+	'PHI',
+	'TOR',
+	'CHI',
+	'BRK',
+	'CLE',
+	'ATL',
+	'CHO'
+].sort()
+
 export const fullName = ({ first_name, last_name }) => `${first_name} ${last_name}`
 
 export const getGamesPlayed = (playerName, gameStats) =>
