@@ -133,7 +133,9 @@
 		text-align: left;
 	}
 
-	select {
-		font-size: 1.16em;
+	@media (max-width: 768px) {
+		select {
+			font-size: 1.24em;
+		}
 	}
 </style>
