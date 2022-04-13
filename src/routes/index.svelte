@@ -1,5 +1,6 @@
 <script>
 	import Leaderboard from '$lib/components/Leaderboard.svelte'
+	import ScoringBreakdown from '$lib/components/ScoringBreakdown/index.svelte'
 
 	export let gameStats, participantScores
 
@@ -42,11 +43,11 @@
 		{/each}
 	</table>
 
-	<!-- <h2>Top Scorers Overall</h2>
+	<ScoringBreakdown {gameStats} />
 
-	<h2>Scoring Breakdown</h2>
+	<!-- <h2>Top Scorers Overall</h2> -->
 
-	<h2>Team Breakdown</h2> -->
+	<!-- <h2>Team Breakdown</h2> -->
 </div>
 
 <style>
