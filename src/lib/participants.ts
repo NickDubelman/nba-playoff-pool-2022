@@ -123,7 +123,7 @@ const participants = {
 	'Robby T': [
 		'Jimmy Butler',
 		'Bam Adebayo',
-		'Karl Anthony Towns',
+		'Karl-Anthony Towns',
 		'Anthony Edwards',
 		"D'Angelo Russell",
 		'Max Strus',
