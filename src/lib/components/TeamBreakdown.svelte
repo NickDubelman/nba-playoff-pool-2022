@@ -135,7 +135,7 @@
 
 	@media (max-width: 768px) {
 		select {
-			font-size: 1.24em;
+			font-size: 1.32em;
 		}
 	}
 </style>
