@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Leaderboard from '$lib/components/Leaderboard.svelte'
 	import TodaysTopPerformers from '$lib/components/TodaysTopPerformers.svelte'
 	import ScoringBreakdown from '$lib/components/ScoringBreakdown/index.svelte'
@@ -21,13 +21,9 @@
 	</p>
 
 	<Leaderboard {participantScores} />
-
 	<TodaysTopPerformers {gameStats} />
-
 	<ScoringBreakdown {gameStats} />
-
 	<TopScorersOverall {gameStats} />
-
 	<TeamBreakdown {gameStats} />
 </div>
 
