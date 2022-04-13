@@ -15,20 +15,28 @@ export const nameDifferences = {
 
 export const remainingTeams = [
 	// West
-	'UTA',
-	'MEM',
 	'PHO',
-	'LAC',
+	'MEM',
+	'GSW',
 	'DAL',
+	'UTA',
 	'DEN',
+	'MIN',
+	'LAC',
+	'NOP',
+	'SAS',
 
 	// East
-	'PHI',
-	'BRK',
+	'MIA',
 	'BOS',
 	'MIL',
-	'MIA',
-	'ATL'
+	'PHI',
+	'TOR',
+	'CHI',
+	'BRK',
+	'CLE',
+	'ATL',
+	'CHO'
 ]
 
 // { name: 'Will Barton', team: "DEN" }[]
