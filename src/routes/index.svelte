@@ -2,6 +2,7 @@
 	import Leaderboard from '$lib/components/Leaderboard.svelte'
 	import TodaysTopPerformers from '$lib/components/TodaysTopPerformers.svelte'
 	import ScoringBreakdown from '$lib/components/ScoringBreakdown/index.svelte'
+	import TopScorersOverall from '$lib/components/TopScorersOverall.svelte'
 
 	export let gameStats, participantScores
 </script>
@@ -18,14 +19,13 @@
 		for the stats to update.
 	</p>
 
-	<h2>Leaderboard</h2>
 	<Leaderboard {participantScores} />
 
 	<TodaysTopPerformers {gameStats} />
 
 	<ScoringBreakdown {gameStats} />
 
-	<!-- <h2>Top Scorers Overall</h2> -->
+	<TopScorersOverall {gameStats} />
 
 	<!-- <h2>Team Breakdown</h2> -->
 </div>
@@ -35,9 +35,5 @@
 		font-family: 'Source Serif Pro';
 		width: 464px;
 		margin: auto;
-	}
-
-	table {
-		margin-bottom: 16px;
 	}
 </style>

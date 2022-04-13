@@ -72,6 +72,8 @@
 	})
 </script>
 
+<h2>Leaderboard</h2>
+
 <table>
 	<tr>
 		<th style="width: 132px">Participant</th>

@@ -65,5 +65,15 @@ export const teamColors = {
 	PHO: '#e25301'
 }
 
+export const fullName = ({ first_name, last_name }) => `${first_name} ${last_name}`
+
+export const getGamesPlayed = (playerName, gameStats) =>
+	gameStats
+		.filter(({ player }) => {
+			playerName = nameDifferences[playerName] || playerName
+			return fullName(player) === playerName
+		})
+		.filter(({ min }) => min && min !== '0:00').length
+
 // { name: 'Will Barton', team: "DEN" }[]
 export const haventPlayedYet: { name: string; team: string }[] = []
