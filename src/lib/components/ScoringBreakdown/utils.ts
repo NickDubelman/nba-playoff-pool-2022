@@ -227,7 +227,7 @@ function stagger(xScale) {
 	}
 }
 
-export const margin = { top: 30, right: 30, bottom: 0, left: 122 }
+export const margin = { top: 0, right: 0, bottom: 8, left: 86 }
 const duration = 480
 export const barStep = 32
 const barPadding = 0.09375
