@@ -85,7 +85,6 @@ export function up(svg, d, xScale, xAxis, width) {
 
 	const participantColor = d3
 		.scaleSequential()
-		// @ts-ignore
 		.domain([0, d3.max(d.parent.children, d => d.value)])
 		.interpolator(d3.interpolateYlGnBu)
 
@@ -183,16 +182,7 @@ export function down(svg, d, doAnimation, xScale, xAxis, width) {
 		.interpolator(d3.interpolateYlGnBu)
 
 	// Update the x-axis.
-	svg
-		.selectAll('.x-axis')
-		.transition(transition2)
-		.call(g =>
-			g
-				.attr('class', 'x-axis')
-				.attr('transform', `translate(0,${margin.top})`)
-				.call(d3.axisTop(xScale).ticks(width / 80))
-				.call(g => (g.selection ? g.selection() : g).select('.domain').remove())
-		)
+	svg.selectAll('.x-axis').transition(transition2).call(xAxis)
 
 	// Transition entering bars to the new x-scale.
 	enter
@@ -227,7 +217,7 @@ function stagger(xScale) {
 	}
 }
 
-export const margin = { top: 0, right: 0, bottom: 8, left: 86 }
+export const margin = { top: 16, right: 0, bottom: 8, left: 86 }
 const duration = 480
 export const barStep = 32
 const barPadding = 0.09375

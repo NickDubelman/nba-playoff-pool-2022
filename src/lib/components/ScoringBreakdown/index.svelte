@@ -56,14 +56,14 @@
 		const xAxis = g =>
 			g
 				.attr('class', 'x-axis')
-				.attr('transform', `translate(0,${margin.top})`)
+				.attr('transform', `translate(0, ${margin.top})`)
 				.call(d3.axisTop(xScale).ticks(width / 80))
 				.call(g => (g.selection ? g.selection() : g).select('.domain').remove())
 
 		const yAxis = g =>
 			g
 				.attr('class', 'y-axis')
-				.attr('transform', `translate(${margin.left + 0.5},0)`)
+				.attr('transform', `translate(${margin.left + 0.5}, 0)`)
 				.call(g =>
 					g
 						.append('line')
