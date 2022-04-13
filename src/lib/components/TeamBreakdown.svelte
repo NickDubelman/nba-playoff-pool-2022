@@ -132,4 +132,8 @@
 	tr th {
 		text-align: left;
 	}
+
+	select {
+		font-size: 1.16em;
+	}
 </style>
