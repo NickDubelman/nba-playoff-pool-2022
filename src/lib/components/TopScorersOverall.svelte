@@ -51,10 +51,10 @@
 <table>
 	<tr>
 		<th>Player</th>
-		<th style="width: 38px">Team</th>
+		<th style="width: 42px">Team</th>
 		<th>Picked By</th>
-		<th style="width: 52px">Points</th>
-		<th style="width: 52px">Games Played</th>
+		<th style="width: 56px">Points</th>
+		<th style="width: 56px">Games Played</th>
 		<th>PPG</th>
 	</tr>
 
@@ -74,6 +74,7 @@
 
 <style>
 	table {
+		width: 100%;
 		font-size: 0.86em;
 		border-collapse: collapse;
 	}
