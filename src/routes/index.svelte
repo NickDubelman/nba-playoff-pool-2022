@@ -1,21 +1,9 @@
 <script>
 	import Leaderboard from '$lib/components/Leaderboard.svelte'
+	import TodaysTopPerformers from '$lib/components/TodaysTopPerformers.svelte'
 	import ScoringBreakdown from '$lib/components/ScoringBreakdown/index.svelte'
 
 	export let gameStats, participantScores
-
-	$: topScorers = gameStats
-		.sort((a, b) => {
-			if (a.pts !== b.pts) {
-				return a.pts > b.pts ? -1 : 1
-			}
-
-			const aName = `${a.player.first_name} ${a.player.last_name}`
-			const bName = `${b.player.first_name} ${b.player.last_name}`
-			return aName < bName ? -1 : 1
-		})
-		.filter(player => player.pts)
-		.slice(0, 24)
 </script>
 
 <svelte:head>
@@ -33,15 +21,7 @@
 	<h2>Leaderboard</h2>
 	<Leaderboard {participantScores} />
 
-	<h2>Today's Top Performers</h2>
-	<table>
-		{#each topScorers as { player, pts }}
-			<tr>
-				<td>{player.first_name} {player.last_name}</td>
-				<td>{pts}</td>
-			</tr>
-		{/each}
-	</table>
+	<TodaysTopPerformers {gameStats} />
 
 	<ScoringBreakdown {gameStats} />
 
