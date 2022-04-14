@@ -11,7 +11,7 @@ import {
 
 const startDate = new Date(2022, 3, 12) // first day of play-in tournament
 
-async function getGames() {
+export async function getGames() {
 	let allData = []
 
 	const baseURL = 'https://www.balldontlie.io/api/v1/games'
@@ -34,9 +34,7 @@ async function getGames() {
 	return allData
 }
 
-export async function getStats() {
-	const games = await getGames()
-
+export async function getStats(games) {
 	let allData = []
 
 	const baseURL = 'https://www.balldontlie.io/api/v1/stats'

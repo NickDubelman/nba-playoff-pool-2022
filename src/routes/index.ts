@@ -1,4 +1,4 @@
-import { getParticipantScores, getStats } from '$lib/pull'
+import { getGames, getParticipantScores, getStats } from '$lib/pull'
 
 let cachedStats = null
 
@@ -12,23 +12,26 @@ const shouldRefetch = () => {
 }
 
 export async function get() {
-	let gameStats
+	let games, gameStats
 	if (shouldRefetch()) {
 		cachedStats = { ...cachedStats, fetching: true }
-		gameStats = await getStats()
+		games = await getGames()
+		gameStats = await getStats(games)
 
 		cachedStats = {
-			data: gameStats,
+			data: { games, gameStats },
 			time: new Date(),
 			fetching: false
 		}
 	} else {
-		gameStats = cachedStats.data
+		gameStats = cachedStats.data.gameStats
+		games = cachedStats.data.games
 	}
 
 	const participantScores = getParticipantScores(gameStats)
 	return {
 		body: {
+			games,
 			gameStats,
 			participantScores
 		}

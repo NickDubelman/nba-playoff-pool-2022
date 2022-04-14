@@ -5,7 +5,7 @@
 	import TopScorersOverall from '$lib/components/TopScorersOverall.svelte'
 	import TeamBreakdown from '$lib/components/TeamBreakdown.svelte'
 
-	export let gameStats, participantScores
+	export let games, gameStats, participantScores
 </script>
 
 <svelte:head>
@@ -21,7 +21,7 @@
 	</p>
 
 	<Leaderboard {participantScores} />
-	<TodaysTopPerformers {gameStats} />
+	<TodaysTopPerformers {gameStats} {games} />
 	<ScoringBreakdown {gameStats} />
 	<TopScorersOverall {gameStats} />
 	<TeamBreakdown {gameStats} />
