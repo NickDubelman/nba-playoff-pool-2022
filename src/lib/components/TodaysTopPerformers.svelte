@@ -19,7 +19,7 @@
 	const gameIDs = games.filter(game => game.date === date).map(game => game.id)
 	const statsForGames = gameStats.filter(stats => gameIDs.includes(stats.game.id))
 
-	const topPerformances = statsForGames
+	$: topPerformances = statsForGames
 		.sort((a, b) => (a.pts > b.pts ? -1 : 1))
 		.slice(0, numPlayers)
 	if (topPerformances.length === 0) {
