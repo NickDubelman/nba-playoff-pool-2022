@@ -14,7 +14,7 @@
 		// First time we see a player, initialize an entry in the map for them
 		if (!playerStats[name]) {
 			// Determine which participant picked the player
-			const pickedBy = Object.entries(participants).find(([participant, players]) =>
+			const pickedBy = Object.entries(participants).find(([_, players]) =>
 				players.map(p => nameDifferences[p] || p).includes(name)
 			)
 
@@ -37,7 +37,13 @@
 			pts,
 			gamesPlayed: getGamesPlayed(name, gameStats)
 		}))
-		.sort((a, b) => (a.pts > b.pts ? -1 : 1))
+		.sort((a, b) => {
+			if (a.pts !== b.pts) {
+				return a.pts > b.pts ? -1 : 1
+			}
+
+			return a.name < b.name ? -1 : 1
+		})
 		.slice(0, numPlayers)
 </script>
 

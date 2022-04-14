@@ -36,7 +36,7 @@ export const remainingTeams = [
 	'BRK',
 	'CLE',
 	'ATL',
-	'CHO'
+	'CHA'
 ]
 
 export const teamColors = {
@@ -88,7 +88,7 @@ export const allTeams = [
 	'BRK',
 	'CLE',
 	'ATL',
-	'CHO'
+	'CHA'
 ].sort()
 
 export const fullName = ({ first_name, last_name }) => `${first_name} ${last_name}`

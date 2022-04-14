@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { fullName } from '$lib/utils'
+
 	import * as d3 from 'd3'
 
 	export let games
@@ -19,38 +21,34 @@
 	const gameIDs = games.filter(game => game.date === date).map(game => game.id)
 	const statsForGames = gameStats.filter(stats => gameIDs.includes(stats.game.id))
 
-	const topPerformances = statsForGames
-		.sort((a, b) => (a.pts > b.pts ? -1 : 1))
-		.slice(0, numPlayers)
-	if (topPerformances.length === 0) {
-		throw new Error('could not get top performers')
-	}
-
-	const lastPerformance = topPerformances[topPerformances.length - 1]
-	const maxPoints = d3.max(topPerformances.map(p => p.pts))
-	const pointsColor = d3
-		.scaleSequential()
-		.domain([Math.min(lastPerformance.pts - 2, maxPoints / 2), maxPoints])
-		.interpolator(d3.interpolateHsl('white', '#38c434CC'))
-
-	$: topScorers = gameStats
+	$: topPerformances = statsForGames
 		.sort((a, b) => {
 			if (a.pts !== b.pts) {
 				return a.pts > b.pts ? -1 : 1
 			}
 
-			const aName = `${a.player.first_name} ${a.player.last_name}`
-			const bName = `${b.player.first_name} ${b.player.last_name}`
-			return aName < bName ? -1 : 1
+			return fullName(a.player) < fullName(b.player) ? -1 : 1
 		})
-		.filter(player => player.pts)
 		.slice(0, numPlayers)
+
+	$: {
+		if (topPerformances.length === 0) {
+			throw new Error('could not get top performers')
+		}
+	}
+
+	$: lastPerformance = topPerformances[topPerformances.length - 1]
+	$: maxPoints = d3.max(topPerformances.map(p => p.pts))
+	$: pointsColor = d3
+		.scaleSequential()
+		.domain([Math.min(lastPerformance.pts - 2, maxPoints / 2), maxPoints])
+		.interpolator(d3.interpolateHsl('white', '#38c434CC'))
 </script>
 
 <h2>Today's Top Performers</h2>
 
 <div class="num-players-selector">
-	<input type="range" min="3" max="81" bind:value={numPlayers} />
+	<input type="range" min="3" max="32" bind:value={numPlayers} />
 	<span>showing top {numPlayers}</span>
 </div>
 
