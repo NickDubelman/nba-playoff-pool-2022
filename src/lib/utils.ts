@@ -22,9 +22,7 @@ export const remainingTeams = [
 	'UTA',
 	'DEN',
 	'MIN',
-	'LAC',
 	'NOP',
-	'SAS',
 
 	// East
 	'MIA',
@@ -34,9 +32,7 @@ export const remainingTeams = [
 	'TOR',
 	'CHI',
 	'BRK',
-	'CLE',
-	'ATL',
-	'CHA'
+	'ATL'
 ]
 
 export const teamColors = {

@@ -41,6 +41,7 @@
 	$: maxPoints = d3.max(topPerformances.map(p => p.pts))
 	$: pointsColor = d3
 		.scaleSequential()
+		// @ts-ignore
 		.domain([Math.min(lastPerformance.pts - 2, maxPoints / 2), maxPoints])
 		.interpolator(d3.interpolateHsl('white', '#38c434CC'))
 </script>
