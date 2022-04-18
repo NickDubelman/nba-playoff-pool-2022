@@ -47,7 +47,7 @@ const participants = {
 		'Khris Middleton',
 		'Desmond Bane',
 		'Tobias Harris',
-		'Gary Trent',
+		'Gary Trent Jr.',
 		'Will Barton',
 		'Pat Connaughton',
 		'Dorian Finney-Smith',
