@@ -14,7 +14,7 @@ const participants = {
 		'Giannis Antetokounmpo',
 		'Cam Johnson',
 		'Kyle Lowry',
-		'Demar Derozan',
+		'DeMar DeRozan',
 		'Norman Powell',
 		'Marcus Morris',
 		'Nikola Vucevic',
@@ -37,7 +37,7 @@ const participants = {
 		'James Harden',
 		'Dillon Brooks',
 		'Aaron Gordon',
-		'Zach Lavine',
+		'Zach LaVine',
 		'Reggie Jackson',
 		'Evan Mobley',
 		'Ivica Zubac'
@@ -115,7 +115,7 @@ const participants = {
 		'Tyrese Maxey',
 		'Jalen Brunson',
 		'Spencer Dinwiddie',
-		'Bones Hyland',
+		"Nah'Shon Hyland",
 		'Bogdan Bogdanovic',
 		'Clint Capela'
 	],
