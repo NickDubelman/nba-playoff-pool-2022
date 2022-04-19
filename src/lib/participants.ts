@@ -12,13 +12,13 @@ const participants = {
 
 	Mikey: [
 		'Giannis Antetokounmpo',
-		'Cam Johnson',
+		'Cameron Johnson',
 		'Kyle Lowry',
 		'DeMar DeRozan',
 		'Norman Powell',
 		'Marcus Morris',
 		'Nikola Vucevic',
-		"Royce O'Neal"
+		"Royce O'Neale"
 	],
 
 	Nick: [
