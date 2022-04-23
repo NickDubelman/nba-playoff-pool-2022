@@ -4,6 +4,7 @@
 	import ScoringBreakdown from '$lib/components/ScoringBreakdown/index.svelte'
 	import TopScorersOverall from '$lib/components/TopScorersOverall.svelte'
 	import TeamBreakdown from '$lib/components/TeamBreakdown.svelte'
+	import DraftAnalysis from '$lib/components/DraftAnalysis.svelte'
 
 	export let games, gameStats, participantScores
 </script>
@@ -25,6 +26,7 @@
 	<ScoringBreakdown {gameStats} />
 	<TopScorersOverall {gameStats} />
 	<TeamBreakdown {gameStats} />
+	<DraftAnalysis {gameStats} />
 </div>
 
 <style>
