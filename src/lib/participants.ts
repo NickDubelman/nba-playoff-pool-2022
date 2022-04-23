@@ -6,7 +6,7 @@ const participants = {
 		'Cameron Payne',
 		'Victor Oladipo',
 		'Duncan Robinson',
-		'Javale McGee',
+		'JaVale McGee',
 		'Tyus Jones'
 	],
 
