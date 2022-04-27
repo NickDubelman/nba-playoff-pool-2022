@@ -30,9 +30,9 @@ export const remainingTeams = [
 	'MIL',
 	'PHI',
 	'TOR',
-	'CHI',
+	'CHI'
 	// 'BRK',
-	'ATL'
+	// 'ATL'
 ]
 
 export const teamColors = {
