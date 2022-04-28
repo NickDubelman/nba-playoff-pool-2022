@@ -20,7 +20,7 @@ export const remainingTeams = [
 	'GSW',
 	'DAL',
 	'UTA',
-	'DEN',
+	// 'DEN',
 	'MIN',
 	'NOP',
 
@@ -29,8 +29,8 @@ export const remainingTeams = [
 	'BOS',
 	'MIL',
 	'PHI',
-	'TOR',
-	'CHI'
+	'TOR'
+	// 'CHI'
 	// 'BRK',
 	// 'ATL'
 ]
