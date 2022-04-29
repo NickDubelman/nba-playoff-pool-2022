@@ -22,14 +22,14 @@ export const remainingTeams = [
 	'UTA',
 	// 'DEN',
 	'MIN',
-	'NOP',
+	// 'NOP',
 
 	// East
 	'MIA',
 	'BOS',
 	'MIL',
-	'PHI',
-	'TOR'
+	'PHI'
+	// 'TOR'
 	// 'CHI'
 	// 'BRK',
 	// 'ATL'
