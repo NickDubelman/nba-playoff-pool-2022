@@ -19,9 +19,9 @@ export const remainingTeams = [
 	'MEM',
 	'GSW',
 	'DAL',
-	'UTA',
+	// 'UTA',
 	// 'DEN',
-	'MIN',
+	// 'MIN',
 	// 'NOP',
 
 	// East
