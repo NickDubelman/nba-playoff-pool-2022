@@ -27,8 +27,8 @@ export const remainingTeams = [
 	// East
 	'MIA',
 	'BOS',
-	'MIL',
-	'PHI'
+	'MIL'
+	// 'PHI'
 	// 'TOR'
 	// 'CHI'
 	// 'BRK',
