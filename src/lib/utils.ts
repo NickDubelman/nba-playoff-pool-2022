@@ -15,8 +15,8 @@ export const nameDifferences = {
 
 export const remainingTeams = [
 	// West
-	'PHO',
-	'MEM',
+	// 'PHO',
+	// 'MEM',
 	'GSW',
 	'DAL',
 	// 'UTA',
@@ -26,8 +26,8 @@ export const remainingTeams = [
 
 	// East
 	'MIA',
-	'BOS',
-	'MIL'
+	'BOS'
+	// 'MIL'
 	// 'PHI'
 	// 'TOR'
 	// 'CHI'
