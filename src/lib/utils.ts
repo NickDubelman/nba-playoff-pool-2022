@@ -17,16 +17,15 @@ export const remainingTeams = [
 	// West
 	// 'PHO',
 	// 'MEM',
-	'GSW',
-	'DAL',
+	// 'GSW'
+	// 'DAL',
 	// 'UTA',
 	// 'DEN',
 	// 'MIN',
 	// 'NOP',
-
 	// East
-	'MIA',
-	'BOS'
+	// 'MIA',
+	// 'BOS'
 	// 'MIL'
 	// 'PHI'
 	// 'TOR'
